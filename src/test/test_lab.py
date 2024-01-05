@@ -29,7 +29,11 @@ class TestWord2VecExercises(unittest.TestCase):
         testLimit = 2
         result = retrieveSimilarWordsExercise(testLimit)
         self.assertTrue(len(result) <= testLimit)
-
+    
+    def test_w2DoesntMatchExercise(self):
+        words = ["cat","feline","dog"]
+        result = w2vDoesntMatchExercise(words)
+        self.assertEqual(self.w2v.doesnt_match(words), result)
     
 
 if __name__ == '__main__':
