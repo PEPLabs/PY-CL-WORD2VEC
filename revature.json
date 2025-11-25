@@ -1,0 +1,35 @@
+{
+  "type": "python",
+  "testFiles": [
+    {
+      "path": "src/test/lab_test.py",
+      "testCases": [
+        {
+          "methodName": "test_retrieveVector",
+          "label": "Verify retrieveVector returns correct word vector",
+          "description": "Checks that retrieveVector returns the exact pretrained Word2Vec vector for a known word ('cat')."
+        },
+        {
+          "methodName": "test_retrieveVector_2",
+          "label": "Verify retrieveVector returns -1 for unknown word",
+          "description": "Ensures that retrieveVector returns -1 when requesting a vector for an out-of-vocabulary word ('revature')."
+        },
+        {
+          "methodName": "test_similarPairExercise",
+          "label": "Verify similarPairExercise returns similarity above threshold",
+          "description": "Checks that the similarity score computed in similarPairExercise is greater than 0.4, confirming semantic similarity handling."
+        },
+        {
+          "methodName": "test_retrieveSimilarWordsExercise",
+          "label": "Verify retrieveSimilarWordsExercise respects limit",
+          "description": "Ensures that retrieveSimilarWordsExercise returns a list of similar words no larger than the limit passed in."
+        },
+        {
+          "methodName": "test_w2DoesntMatchExercise",
+          "label": "Verify w2vDoesntMatchExercise matches model's doesnt_match output",
+          "description": "Ensures that w2vDoesntMatchExercise correctly identifies the out-of-context word using the Word2Vec model’s doesnt_match function."
+        }
+      ]
+    }
+  ]
+}
